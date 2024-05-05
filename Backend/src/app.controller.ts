@@ -10,7 +10,7 @@ export class AppController {
       const typeData = process.env.Type;
       const nameData = process.env.Name;
       this.appService.emitKrakenData(typeData, nameData);
-    }, 2000);
+    }, 1000);
   }
 
 }
