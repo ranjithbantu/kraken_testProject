@@ -1,2 +1,0 @@
-# kraken_testProject
- 

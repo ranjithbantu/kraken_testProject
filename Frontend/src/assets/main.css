@@ -1,0 +1,94 @@
+@import './base.css';
+
+#app {
+  /* max-width: 1440px; */
+  margin: 0 ;
+  padding: 1rem;
+  font-weight: normal;
+  place-items: center;
+}
+.cstyle{
+  padding: 10px;
+  border: 1px solid rgba(16,11,26,255);
+  width: 300px;
+  height: 360px;
+  display: inline-block;
+  background-color: rgba(16,11,26,255);
+  border-radius: 3%;
+}
+.price{
+  display: inline-block;
+  font-size: 10px;
+}
+.quantity:{
+  display: inline-block;
+  font-size: 10px;
+  color: #9f97a9;
+}
+.pl-1{
+  padding-left: 10px;
+}
+.pr-1{
+  padding-right: 10px;
+}
+.ml-2{
+  margin-left: 20px;
+}
+.mr-2{
+  margin-right: 20px;
+}
+.pl-3{
+  padding-left: 100px;
+}
+.pr-3{
+  padding-right: 0px;
+}
+.f-white{
+  color: white;
+}
+.spread-color{
+  color: #9f97a9;
+}
+.tred {
+  color: #f5464f;
+}
+.tg {
+  color: #6fa756;
+}
+.fsize {
+  font-size: 19px;
+}
+.total {
+  font-size: 14px;
+}
+.content{
+  text-align: center;
+  display: inline-block;
+}
+
+/* a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
