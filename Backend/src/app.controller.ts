@@ -12,5 +12,4 @@ export class AppController {
       this.appService.emitKrakenData(typeData, nameData);
     }, 1000);
   }
-
 }

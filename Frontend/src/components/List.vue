@@ -15,6 +15,11 @@
                     {{ kraken.name }} <!-- Display the name of the kraken -->
                 </h5>
             </div>
+            <div class="mb-3">
+                <h6 :class="{'f-white': kraken.opm > 0, 'abnormal': kraken.opm === 0}">
+                    {{ `Speed: ${Math.round(kraken.opm)} ob/min`}}
+                </h6>
+            </div>
             <div class="content">
                 <div class="container mb-2">
                     <div 
@@ -34,8 +39,9 @@
                     <div class="row">
                         <div>
                             <b> Spread: {{ parseFloat(kraken.midPrice.toFixed(3)) }}</b> <!-- Display the mid price of the kraken -->
-                        
-                            <b> ({{ parseFloat(kraken.spread.toFixed(4)) }} %)</b> <!-- Display the spread of the kraken -->
+                            <b :class="{'abnormal': parseFloat(kraken.spread.toFixed(4)) > 10 || kraken.spread <= 0}"> <!-- Display the spread of the kraken -->
+                                ({{ parseFloat(kraken.spread.toFixed(4)) }} %)
+                            </b>
                         </div>
                     </div>
                 </div>
@@ -108,3 +114,9 @@ export default {
     }
 };
 </script>
+
+<style>
+.abnormal {
+    color: red;
+}
+</style>

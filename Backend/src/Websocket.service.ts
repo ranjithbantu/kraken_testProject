@@ -24,15 +24,17 @@ export class WebSocketService {
 
       ws.on('close', () => {
         console.log('Client disconnected');
-        this.clients = this.clients.filter(client => client !== ws);
+        this.clients = this.clients.filter((client) => client !== ws);
       });
     });
   }
 
-  async broadcastMessage(message:  Promise<string> | string) {
-    this.clients.forEach(client => {
+  async broadcastMessage(message: Promise<string> | string) {
+    this.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-         client.send(typeof message === 'string' ? message : JSON.stringify(message))
+        client.send(
+          typeof message === 'string' ? message : JSON.stringify(message),
+        );
       }
     });
   }
